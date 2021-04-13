@@ -1,0 +1,53 @@
+.navbar {
+    display: flex;
+    padding: 0.0rem 2rem;
+    font-size: 23px;
+    color: white;
+    position: relative;
+
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0067A3;
+
+}
+.header-image {
+    order: 1;
+    cursor: pointer;
+
+}
+.avatar-user {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+.drop-container {
+    background-image: url('./img/Rectangle\ 26.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    display: flex;
+    width: 134px;
+    right: 30px;
+    font-size: 14px;
+    color:black;
+
+}
+.drop-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.drop-container ul li:hover {
+ color:#DEDEDE;
+}
+.drop-container ul li:active {
+    color:#DEDEDE;
+   }
+.rotate {
+
+    transition-duration: 500ms;
+    transform: rotate(-180deg);
+}
