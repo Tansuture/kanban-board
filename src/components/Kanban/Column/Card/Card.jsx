@@ -22,7 +22,7 @@ const Card = ({card}) => {
     }
     let  dragHandler=(e,card)=>{
         e.preventDefault()
-        console.log(card)
+
 
     }
     return (
@@ -37,7 +37,7 @@ const Card = ({card}) => {
             onDrop={(e)=>dragHandler(e,card)}>
             <p className='title'>{card.name}</p>
         </div>
-        <Button/>
+
         </>
     )
 }

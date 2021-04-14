@@ -4,19 +4,20 @@ import '../kanban.css'
 import InputCard from './InputCard'
 
 
-const Button=()=> {
+const Button=({columnId})=> {
 const [open,setOpen]=useState(false)
+
         return (
         <>
         <Collapse in={open}>
-        <InputCard setOpen={setOpen}/>
+        <InputCard setOpen={setOpen} columnId={columnId}/>
         </Collapse>
         <Collapse in={!open}>
          <div className= "add" onClick={()=>setOpen(!open)}>+ Add card </div>
          </Collapse>
             </>
             )
-    
+            
 
 }
 export default Button
