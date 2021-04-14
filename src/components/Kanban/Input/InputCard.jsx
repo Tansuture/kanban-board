@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import React from 'react'
 import '../kanban.css'
 import storeApi from '../../../data/storeApi'
-const InputCard=({setOpen,columnId})=>{
+const InputCard=({setOpen,columnIndex})=>{
    const[cardContent,setCard]=useState('')
    const {addCard}=useContext(storeApi)
   let handleOnChange=(e)=>{
@@ -11,8 +11,9 @@ const InputCard=({setOpen,columnId})=>{
   }
  
   let handleBtnConfirm=()=>{
-      addCard(cardContent,columnId)
+      addCard(cardContent,columnIndex)
       setOpen(false)
+     
 
   }
 

@@ -4,7 +4,7 @@ import '../../Kanban/kanban.css'
 import Button from '../Input/Button'
 
 
-const Column=({column})=>{
+const Column=({column,columnIndex})=>{
 
 
 return(
@@ -14,7 +14,7 @@ return(
         {column.cards.map((card,cardIndex)=>(
             <Card card={card} cardIndex={cardIndex} />
         ))}
-            <Button columnId={column.id}/>
+            <Button columnIndex={columnIndex}/>
     </div>
 
     </>
