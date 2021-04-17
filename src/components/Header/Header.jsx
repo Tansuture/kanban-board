@@ -28,7 +28,7 @@ class Header extends Component {
                 </div>
             </nav>
            
-            {this.state.isVisible ? <Dropdown/> :null}
+            {this.state.isVisible ? <Dropdown/>:null}
              </>
             )
     }

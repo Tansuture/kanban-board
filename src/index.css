@@ -9,7 +9,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
   
 }
+.alert-enter {
+  opacity: 0;
+}
 
+.alert-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.alert-exit {
+  opacity: 1;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
