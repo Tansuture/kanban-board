@@ -5,16 +5,36 @@ let state = {
             cards: [
                 {
                     id: "task1",
-                    name: 'Sprint bugfix'
+                    name: 'Login page – performance issues',
+                    time:   new Date().toLocaleString(),
+                    desc: 'task description here backlog'
+                },
+                {
+                    id: "task1",
+                    name: 'Sprint bugfix',
+                    time:   new Date().toLocaleString(),
+                    desc: 'task description here backlog'
                 }
+            
+            
             ]
         },
         {  id:1,
             name: 'Ready',
             cards: [
                 {
-                    id: "task1",
-                    name: 'READY TO GO'
+                    id: "task2",
+                    name: 'Shop page – performance issues',
+                    time:   new Date().toLocaleString(),
+                    desc: 'task description here ready'
+
+                },
+                {
+                    id: "task2",
+                    name: 'New title',
+                    time:   new Date().toLocaleString(),
+                    desc: 'task description here ready'
+
                 }
             ]
         },
@@ -22,8 +42,10 @@ let state = {
             name: 'In Progress',
             cards: [
                 {
-                    id: "task1",
-                    name: 'IM IN PROGGRES'
+                    id: "task3",
+                    name: 'User page – performance issues',
+                    time:   new Date().toLocaleString(),
+                    desc: 'task description here in progress'
                 }
             ]
         },
@@ -31,8 +53,10 @@ let state = {
             name: 'Finished',
             cards: [
                 {
-                    id: "task1",
-                    name: 'BUEB Y'
+                    id: "task4",
+                    name: 'Main page – performance issues',
+                    time:   new Date().toLocaleString(),
+                    desc: 'task description here finished'
                 }
             ]
         }

@@ -13,8 +13,7 @@ const InputCard=({setOpen,columnIndex})=>{
   let handleBtnConfirm=()=>{
       addCard(cardContent,columnIndex)
       setOpen(false)
-      setCard('')
-   
+      setCard('') 
   }
 
     return(

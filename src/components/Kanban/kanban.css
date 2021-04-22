@@ -52,3 +52,7 @@
 .submit-btn:hover{
     background-color: rgba(0,121,191,0.80)
 }
+.cardName{
+    text-decoration: none;
+    color:black
+}

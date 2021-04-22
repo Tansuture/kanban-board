@@ -2,7 +2,6 @@
     display: flex;
     padding: 0.0rem 2rem;
     font-size: 23px;
-    color: white;
     position: relative;
 
     align-items: center;
@@ -50,4 +49,9 @@
 
     transition-duration: 500ms;
     transform: rotate(-180deg);
+}
+
+.kanbanName{
+    text-decoration: none;
+    color:white;
 }
