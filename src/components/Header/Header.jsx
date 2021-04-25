@@ -20,17 +20,17 @@ class Header extends Component {
     }
     render(){
         return ( 
-            <>
-             <nav className="navbar">
+            <div className="navbar">
+             <div className='nav-wrapper' >
                 <NavLink className='kanbanName' to='/'><p>Awesome Kanban Board</p></NavLink>
                 <div className="header-image" onClick={this.showDrop}>
                     <img src={logo} className="avatar-user"></img>
                     <img src ={arrow}className={this.state.isVisible ? 'rotate':null } onClick={this.showDrop} ></img>
                 </div>
-            </nav>
+            </div>
            
             {this.state.isVisible ? <Dropdown/>:null}
-             </>
+            </div>
             )
     }
     

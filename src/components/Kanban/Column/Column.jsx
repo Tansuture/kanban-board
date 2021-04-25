@@ -7,7 +7,9 @@ import { Collapse } from '@material-ui/core'
 import { useState } from 'react'
 import ChooseDropDown from '../ChooseDropDown/ChooseDropDown'
 
+
 const Column=({column, columnIndex,data}) => {
+    
 
     const backlog = column.name === 'Backlog'
     const [isOpen,setOpen]=useState(false)
@@ -22,12 +24,16 @@ const Column=({column, columnIndex,data}) => {
                 
                 {isOpen ?(
                 backlog ? ( <Collapse in={isOpen}><InputCard setOpen={setOpen }columnIndex={columnIndex}/></Collapse>) : 
-                (<ChooseDropDown data={data}    columnIndex={columnIndex} />)
+                (<ChooseDropDown data={data}   columnIndex={columnIndex} />)
                  ):(
                     <Button  setOpen ={setOpen} isOpen={isOpen} columnIndex={columnIndex}/>
                     )
                 }
             </div>
+            
+          
+     
+         
         </>
     )
 

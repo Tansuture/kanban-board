@@ -5,10 +5,6 @@ import storeApi from '../../../data/storeApi'
 const InputCard=({setOpen,columnIndex})=>{
    const[cardContent,setCard]=useState('')
    const {addCard}=useContext(storeApi)
-  let handleOnChange=(e)=>{
-      setCard(e.target.value)
-
-  }
  
   let handleBtnConfirm=()=>{
       addCard(cardContent,columnIndex)
@@ -19,7 +15,7 @@ const InputCard=({setOpen,columnIndex})=>{
     return(
         <>
         <div className='input-container card'>
-        <input className='input'onChange={handleOnChange} value={cardContent} ></input>
+        <input className='input'onChange={e=>setCard(e.target.value)} value={cardContent} ></input>
         </div>
         <div>
             <button className="submit-btn"  onClick={handleBtnConfirm}>Submit</button>

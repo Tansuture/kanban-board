@@ -4,13 +4,13 @@ let state = {
             name: 'Backlog',
             cards: [
                 {
-                    id: "task1",
+                    id: 1,
                     name: 'Login page – performance issues',
                     time:   new Date().toLocaleString(),
                     desc: 'task description here backlog'
                 },
                 {
-                    id: "task1",
+                    id: 2,
                     name: 'Sprint bugfix',
                     time:   new Date().toLocaleString(),
                     desc: 'task description here backlog'
@@ -23,14 +23,14 @@ let state = {
             name: 'Ready',
             cards: [
                 {
-                    id: "task2",
+                    id: 1,
                     name: 'Shop page – performance issues',
                     time:   new Date().toLocaleString(),
                     desc: 'task description here ready'
 
                 },
                 {
-                    id: "task2",
+                    id: 2,
                     name: 'New title',
                     time:   new Date().toLocaleString(),
                     desc: 'task description here ready'
@@ -42,7 +42,7 @@ let state = {
             name: 'In Progress',
             cards: [
                 {
-                    id: "task3",
+                    id: 1,
                     name: 'User page – performance issues',
                     time:   new Date().toLocaleString(),
                     desc: 'task description here in progress'
@@ -53,7 +53,7 @@ let state = {
             name: 'Finished',
             cards: [
                 {
-                    id: "task4",
+                    id: 1,
                     name: 'Main page – performance issues',
                     time:   new Date().toLocaleString(),
                     desc: 'task description here finished'
