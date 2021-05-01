@@ -1,4 +1,4 @@
-import {BrowserRouter, Route} from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 import {useState} from 'react';
 import state from './data/state'
 
@@ -10,21 +10,22 @@ import Description from './components/cardFullDesc/Description';
 
 function App() {
     const [data, setData] = useState(state)
+     
+
 
 
     return (
-        <BrowserRouter>
+     <Switch>
 
             <div className='page'>
                 <Header/>
                 <Route exact path='/' render= {()=><Kanban data={data}setData={setData}/>}/>
-                 <Route path='/desc'  render = {()=><Description  data={data}/>}/>
-        
+                <Route path='/:id'   render={(props) => <Description data={data} {...props}/>}/>
+
 
                 <Footer data={data}/>
             </div>
-
-        </BrowserRouter>
+            </Switch>
 
     );
 }

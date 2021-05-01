@@ -3,7 +3,7 @@ import logo from './img/user-avatar.png'
 import arrow from './img/arrow-down.png'
 import Dropdown from './DropDown/Dropdown'
 import React,{Component} from 'react'
-import { NavLink } from 'react-router-dom'
+
 
 class Header extends Component {
     constructor(){
@@ -22,13 +22,13 @@ class Header extends Component {
         return ( 
             <div className="navbar">
              <div className='nav-wrapper' >
-                <NavLink className='kanbanName' to='/'><p>Awesome Kanban Board</p></NavLink>
+               <p className='kanbanName'>Awesome Kanban Board</p>
                 <div className="header-image" onClick={this.showDrop}>
                     <img src={logo} className="avatar-user"></img>
-                    <img src ={arrow}className={this.state.isVisible ? 'rotate':null } onClick={this.showDrop} ></img>
+                    <img src ={arrow} className={this.state.isVisible ? 'rotate':null } onClick={this.showDrop} ></img>
                 </div>
-            </div>
-           
+            
+           </div>
             {this.state.isVisible ? <Dropdown/>:null}
             </div>
             )

@@ -2,7 +2,7 @@ import { Collapse } from '@material-ui/core'
 import '../kanban.css'
 
 
-const Button=({columnIndex,setOpen,isOpen})=> {
+const Button=({setOpen,isOpen})=> {
   
 
         return (

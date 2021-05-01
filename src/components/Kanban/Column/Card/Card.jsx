@@ -4,7 +4,7 @@ const Card = ({card}) => {
     return (
      
         <div className='card'>
-         <NavLink className='cardName' to='/desc'><p>{card.name}</p></NavLink>
+             <NavLink className='cardName' to={`/${card.id}`}><p>{card.name}</p></NavLink>
         </div>
     
        

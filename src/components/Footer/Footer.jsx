@@ -8,8 +8,10 @@ const Footer=({data})=>{
         <div className='footer'>
         <div className='footer-wrapper'>
             
-            <p className='count-task'>Active task	&#60; {active}	&#62; </p>
-            <p className='count-finished'>Finished task	&#60; {finished}	&#62; </p>
+            <p className='active '>Active task	&#60;{active}&#62; </p>
+            <p >Finished task	&#60;{finished}&#62; </p>
+            <p className='name-year'>Kanban board by &#60;Tansu&#62;,&#60;2021 &#62; </p>
+            
 
           
         </div>

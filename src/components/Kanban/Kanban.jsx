@@ -2,35 +2,43 @@ import React, {useState, useEffect} from 'react'
 import Column from './Column/Column';
 import './kanban.css'
 import StoreApi from '../../data/storeApi'
+import { v4 as uuid } from 'uuid';
 
 const Kanban = ({data, setData}) => {
 
 // функция для добавления задания в backlog
-    const addCard = (name, columnIndex) => {
-        const card = {
-            name
-        }
-        setData(prevState => {
-            const {columns} = data
-            columns[columnIndex]
-                .cards
-                .push(card)
-            let cardId = columns[columnIndex].cards.length
-            card.id = cardId
-            let newData = new Date().toLocaleString()
-            card.time = newData
-            return {columns}
-        })
-
+const addCard = (name, columnIndex) => {
+    const card = {
+        name
     }
+    setData(prevState => {
+        const {columns} = data
+        columns[columnIndex]
+            .cards
+            .push(card)
+        let cardId = columns[columnIndex].cards.length
+        card.id = cardId
+        let newData = new Date().toLocaleString()
+        card.time = newData
+        return {columns}
+    })
+
+}
+
+   
+
 // функция для дропдауна
     let addCardDrop = (orderNum, columnIndex) => {
+        
         console.log(orderNum)
-        setData(prevState => {
-            const {columns} = prevState
-            columns[columnIndex - 1].cards.splice(orderNum, 1)
-            return {columns}
-        })
+      
+            setData(prevState=>{
+                const {columns} = prevState
+                columns[columnIndex - 1].cards.splice(orderNum, 1)
+                return{columns}
+            })
+           
+    
 
     }
 

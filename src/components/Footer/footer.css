@@ -10,7 +10,18 @@
 
     background-color:rgba(0, 103, 163, 1);
 }
-.right{
-    order: 999;
-    margin-left: auto;
+.name-year{
+    flex-grow: 1;
+    text-align: right;
 }
+.active{
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 807px) {
+    .footer {
+      display: none;
+      
+    }
+  }
+  

@@ -5,6 +5,7 @@
     font-size: 23px;
     position: relative;
 
+
     align-items: center;
     justify-content: space-between;
     background-color: #0067A3;
@@ -56,3 +57,17 @@
     text-decoration: none;
     color:white;
 }
+@media only screen and (max-width: 800px) {
+    .kanbanName {
+        display: none;
+      
+    }
+    .header-image{
+        flex-grow: 1;
+        text-align: right;
+    }
+    .nav-wrapper{
+        padding: 0;
+    }
+  }
+  
