@@ -2,17 +2,24 @@
     background:white;
     width: 80%;
     height: 548px;
- 
+    position: relative;
     padding: 30px;
     margin: 22px auto;
    
 }
 .card-name{
     font-size:24px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    margin:0;
 }
 .clear{
    position: relative;
     cursor: pointer;
     left: 97%;
     bottom: 3%;
+}
+.cardTime{
+position: absolute;
+bottom:20px;
 }

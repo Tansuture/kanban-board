@@ -15,17 +15,17 @@ function App() {
 
 
     return (
-     <Switch>
+    
 
             <div className='page'>
                 <Header/>
                 <Route exact path='/' render= {()=><Kanban data={data}setData={setData}/>}/>
-                <Route path='/:id'   render={(props) => <Description data={data} {...props}/>}/>
+                <Route path='/:colId/:cardId'   render={(props) => <Description data={data} {...props}/>}/>
 
 
                 <Footer data={data}/>
             </div>
-            </Switch>
+           
 
     );
 }

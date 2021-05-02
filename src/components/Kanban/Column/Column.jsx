@@ -20,11 +20,11 @@ const Column=({column, columnIndex,data}) => {
             <div className="column">
                 <p className="title">{column.name}</p>
                 
-                { column.cards.map((card,cardIndex) => <Card card={card} cardIndex={cardIndex} />) }
+                { column.cards.map((card,cardIndex) => <Card  key ={card.id}columnIndex={columnIndex} card={card} cardIndex={cardIndex} />) }
                 
                 {isOpen ?(
-                backlog ? ( <Collapse in={isOpen}><InputCard setOpen={setOpen }columnIndex={columnIndex}/></Collapse>) : 
-                (<ChooseDropDown data={data}   columnIndex={columnIndex} />)
+                backlog ? ( <Collapse in={isOpen}><InputCard setOpen={setOpen }  columnIndex={columnIndex}/></Collapse>) : 
+                (<ChooseDropDown data={data}  columnIndex={columnIndex} />)
                  ):(
                     <Button  setOpen ={setOpen} isOpen={isOpen} columnIndex={columnIndex}/>
                     )

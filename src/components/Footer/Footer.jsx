@@ -10,7 +10,7 @@ const Footer=({data})=>{
             
             <p className='active '>Active task	&#60;{active}&#62; </p>
             <p >Finished task	&#60;{finished}&#62; </p>
-            <p className='name-year'>Kanban board by &#60;Tansu&#62;,&#60;2021 &#62; </p>
+            <p className='name-year'>Kanban board by &#60;Tansu&#62;,&#60;2021&#62; </p>
             
 
           

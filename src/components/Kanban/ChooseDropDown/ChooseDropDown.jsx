@@ -6,16 +6,16 @@ import React from 'react'
 
 const ChooseDropDown = ({columnIndex, data}) => {
     const {addCardDrop} = useContext(storeApi)
-    // const [dropData, setDropData] = useState('')
+    const [dropData, setDropData] = useState('')
 
     let cardList = data
         .filter(column => column.id === columnIndex - 1)
         .map(column => column.cards)
         .flat()
+        
+ 
 
  
- 
-
 return (
     <div className="dropdown">
        
