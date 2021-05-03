@@ -8,7 +8,7 @@ const ChooseDropDown = ({columnIndex, data}) => {
     const {addCardDrop} = useContext(storeApi)
     const [dropData, setDropData] = useState('')
 
-    let cardList = data
+    let prevColumnCardList = data
         .filter(column => column.id === columnIndex - 1)
         .map(column => column.cards)
         .flat()
@@ -19,9 +19,9 @@ const ChooseDropDown = ({columnIndex, data}) => {
 return (
     <div className="dropdown">
        
-        <select className="selector" onChange={(e)=>addCardDrop(e.target.value,columnIndex)}>
+        <select className="selector" onChange={(e) => addCardDrop(e.target.value, columnIndex)}>
             <option></option>
-            {cardList.map(card => <option value={card.id} key={card.id}>{card.name}</option>)}
+            {prevColumnCardList.map( (currElement, index) => <option value={index} key={currElement.id}> {currElement.name} </option>)}
         </select>
  
      
