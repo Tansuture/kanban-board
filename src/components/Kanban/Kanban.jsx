@@ -2,45 +2,43 @@ import React, {useState, useEffect} from 'react'
 import Column from './Column/Column';
 import './kanban.css'
 import StoreApi from '../../data/storeApi'
-
+import { v4 as uuid } from 'uuid';
 const Kanban = ({data, setData}) => {
 
     // функция для добавления задания в backlog
     const addCard = (name, columnIndex) => {
-        const card = {
-            name
-        }
-        setData(prevState => {
-            const {columns} = data
-            columns[columnIndex]
-                .cards
-                .push(card)
-            let cardId = columns[columnIndex].cards.length
-            card.id = cardId
-            let newData = new Date().toLocaleString()
-            card.time = newData
-            return {columns}
-        })
+       
+      const {columns}=data
     
-    }
+      let cardId = columns[columnIndex].cards.length
+            let card = {
+                id:cardId,
+                name,
+                time: new Date().toLocaleString()
+     
+             }
+            setData(prevState=>{
+                const column = data.columns[columnIndex];
+             column.cards = [...column.cards,card];
+     
+             const newState = {
+                 ...data,
+                 columns: {
+                   ...data.columns,
+                   [columnIndex]: column,
+                 },
+               };
+               return {newState}
+            })
+           
+             
+               
+             
+       
+        };
+
     
        
-    
-    // функция для дропдауна
-        let addCardDrop = (orderNum, columnIndex) => {
-            
-            console.log(orderNum)
-          
-                setData(prevState=>{
-                    const {columns} = prevState
-                    columns[columnIndex - 1].cards.splice(orderNum, 1)
-                    return{columns}
-                })
-               
-        
-    
-        }
-    
         useEffect(() => {
             localStorage.setItem('data', JSON.stringify(data))
         }, [data])
@@ -49,9 +47,8 @@ const Kanban = ({data, setData}) => {
             <div className="kanban">
                 <div className="main-wrapper">
                     <StoreApi.Provider
-                        value={{addCard, addCardDrop }}>
-                        {data
-                            .columns
+                        value={{addCard}}>
+                        {data.columns
                             .map((column, columnIndex, data) => (<Column
                                 columnIndex={columnIndex}column ={column}
                                 data={data}
