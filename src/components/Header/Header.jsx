@@ -24,10 +24,11 @@ class Header extends Component {
             <div className="navbar">
              <div className='nav-wrapper' >
                <NavLink to="/" className="link" ><p className='kanbanName'>Awesome Kanban Board</p></NavLink>
-                <div className="header-image" onClick={this.showDrop}>
-                    <img src={logo} className="avatar-user"></img>
+              <div className="header-image" onClick={this.showDrop}>
+                <img src={logo} className="avatar-user"></img>
                     <img src ={arrow} className={this.state.isVisible ? 'rotate':null } onClick={this.showDrop} ></img>
                 </div>
+             
             
            </div>
             {this.state.isVisible ? <Dropdown/>:null}
