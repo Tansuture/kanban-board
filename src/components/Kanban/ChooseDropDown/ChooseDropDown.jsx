@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from 'react'
+import {useContext} from 'react'
 import './ChooseDropDown.css'
 import storeApi from '../../../data/storeApi'
 import React from 'react'
@@ -6,7 +6,7 @@ import React from 'react'
 
 const ChooseDropDown = ({columnIndex, data}) => {
     const {addCardDrop} = useContext(storeApi)
-    const [dropData, setDropData] = useState('')
+   
 
     let prevColumnCardList = data
         .filter(column => column.id === columnIndex - 1)
